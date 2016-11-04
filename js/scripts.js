@@ -28,7 +28,7 @@ Pizza.prototype.findToppings = function() {
   } else if (this.toppings === 6) {
     return 6;
   } else {
-    return 7
+    return 7;
   }
 }
 
