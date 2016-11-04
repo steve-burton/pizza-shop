@@ -16,13 +16,19 @@ Pizza.prototype.findPrice = function() {
 
 Pizza.prototype.findToppings = function() {
   if(this.toppings === 1) {
-    return 1.5;
+    return 1;
   } else if (this.toppings === 2) {
-    return 3;
+    return 2;
   } else if (this.toppings === 3) {
-    return 4.5;
+    return 3;
+  } else if (this.toppings === 4) {
+    return 4;
+  } else if (this.toppings === 5) {
+    return 5;
+  } else if (this.toppings === 6) {
+    return 6;
   } else {
-    return 6
+    return 7
   }
 }
 
@@ -37,6 +43,7 @@ $(document).ready(function(){
     var cost = newPizza.findPrice();
     //$("span").text("");
     $("span#total-price").text((newPizza.findPrice()) + (newPizza.findToppings()));
+    $("h3").show();
     // document.getElementById("span#total-price").reset("");
   });
 });

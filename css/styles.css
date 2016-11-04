@@ -1,0 +1,46 @@
+#header {
+  background-image: url(../img/pizza-head.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 20px 50px 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+h1 {
+  font-size: 8em;
+  font-weight: lighter;
+}
+
+h3 {
+  display: none;
+}
+
+label {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+#dropMenu {
+  margin-right: 50%;
+}
+
+form {
+  margin-left: 5%;
+}
+
+input {
+  line-height: 2em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+h3 {
+  margin-left: 5%;
+}
+
+#bgcolor {
+  background-color: #e8e5dc;
+  height: 1000px
+}
