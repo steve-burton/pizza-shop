@@ -12,29 +12,27 @@ var Pizza = function(pizzaSize, toppings, cost) {
 //     return this.price = 13;
 //   }
 // }
-Pizza.prototype.findPrice = function(pizzaSize, toppings, cost) {
-  if(this.pizzaSize === "Large") {
+Pizza.prototype.findPrice = function() {
+  if(this.pizzaSize === "large") {
     return this.cost;
-  } else if(this.pizzaSize === "Medium") {
-    return 17;
-  } else if(this.pizzaSize === "Small") {
+  } else if(this.pizzaSize === "medium") {
+    return this.cost - 3;
+  } else if(this.pizzaSize === "small") {
     return 13;
-  // } else {
-  //   return this.price;
   }
 }
 
+
 // User Interface
 $(document).ready(function(){
-
   $("form.pizza").submit(function(event){
     event.preventDefault();
-    var newPizza = new Pizza();
-    var pizzaPrice = newPizza.findPrice();
-    var pizzaSize = $("div#size").val();
-    //var toppings = $("input#time").val();
-    $("span").text("");
-    $("span#total-price").text(pizzaPrice);
+    var pizzaSize = $("#sizeSelect").val();
+    var newPizza = new Pizza(pizzaSize, toppings, cost);
+    var cost = newPizza.findPrice();
+    var toppings = $("input#time").val();
+    //$("span").text("");
+    $("span#total-price").text(newPizza.findPrice());
     // document.getElementById("span#total-price").reset("");
   });
 });
