@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Shop</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pizza Shop Order Form</h1>
+
+      <form class="pizza">
+        <div class="form-group">
+          <label for="pizzaSize">Choose a pizza size:</label>
+          <select class="form-control" id="pizzaSize" placeholder="Pizza">
+            <option value="" selected disabled>Please select a size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p id="toppings">Choose the toppings you'd like to add:</p>
+          <input type="checkbox" name="topping-type" value="cheese"> Extra cheese.<br>
+          <input type="checkbox" name="topping-type" value="tomato"> Fresh tomatoes.<br>
+          <input type="checkbox" name="topping-type" value="onion"> Onions.<br>
+          <input type="checkbox" name="topping-type" value="pepper"> Red peppers.<br>
+        </div>
+
+        <button type="submit" class="btn btn-info">Submit order</button>
+      </form>
+
+      <h2>Here's your pizza price: <span id="total-price"></span></h2>
+    </div>
+  </body>
+</html>
